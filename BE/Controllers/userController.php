@@ -22,7 +22,7 @@ if (isset($_POST["action"])){
                 $pass=$_POST["tfpass"];
                 if ($name=Login($un, $pass, $db)){
                     $_SESSION["name"]=$name;
-                    header("location:../../fe/pages/listUsers.php");
+                    header("location:../../Fe/pages/listUsers.php");
                 }else{
                     header("location:../../index.php?errorCode=1&errorDesc=Wrong Username or Password!");
                 }    
@@ -42,12 +42,12 @@ if (isset($_POST["action"])){
             
                 if (Signup($user, $db)){
                     $_SESSION["name"]=$user->firstname." ".$user->lastname;
-                    header("location:../../fe/pages/listUsers.php");
+                    header("location:../../Fe/pages/listUsers.php");
                 }else{
-                    header("location:../../fe/pages/signup.php?errorCode=3&errorDesc=Username already exists!");
+                    header("location:../../Fe/pages/signup.php?errorCode=3&errorDesc=Username already exists!");
                 }    
             }else{
-                header("location:../../fe/pages/signup.php?errorCode=2&errorDesc=Missing Args!");
+                header("location:../../Fe/pages/signup.php?errorCode=2&errorDesc=Missing Args!");
             }
         break;
     }
