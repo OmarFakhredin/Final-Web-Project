@@ -2,7 +2,7 @@
 session_start();
 require_once("../Common/dbconfig.php");
 require_once("../Models/userModel.php");
-
+require_once("../User.php");
 function isMissingArgsLogin(){
     return !isset($_POST["tfun"]) || !isset($_POST["tfpass"]);
 }
@@ -22,7 +22,7 @@ if (isset($_POST["action"])){
                 $pass=$_POST["tfpass"];
                 if ($name=Login($un, $pass, $db)){
                     $_SESSION["name"]=$name;
-                    header("location:../../index.php");
+                    header("location:../../FE/viewMovie.php");
                 }else{
                     header("location:../../index.php?errorCode=1&errorDesc=Wrong Username or Password!");
                 }    
@@ -42,7 +42,7 @@ if (isset($_POST["action"])){
             
                 if (Signup($user, $db)){
                     $_SESSION["name"]=$user->firstname." ".$user->lastname;
-                    header("location:../../Fe/pages/listUsers.php");
+                    header("location:../../FE/viewMovie.php");
                 }else{
                     header("location:../../Fe/pages/signup.php?errorCode=3&errorDesc=Username already exists!");
                 }    

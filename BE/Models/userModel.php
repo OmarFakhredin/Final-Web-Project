@@ -10,8 +10,6 @@ This method inserts the admin info into the table
 */
 function Signup($user, $db)
 {
-    $hashed_password = password_hash($user->password, PASSWORD_DEFAULT);
-
     $query = "INSERT INTO `tbl_users` (`USERNAME`,`EMAIL`,`FN`,`LN`,`PASSWORD`,`SEX`) 
               VALUES (:username, :email, :firstname, :lastname, :password, :sex)";
     $stmt = $db->prepare($query);
@@ -19,7 +17,7 @@ function Signup($user, $db)
     $stmt->bindParam(':email', $user->email);
     $stmt->bindParam(':firstname', $user->firstname);
     $stmt->bindParam(':lastname', $user->lastname);
-    $stmt->bindParam(':password', $hashed_password);
+    $stmt->bindParam(':password', $user->password); // No hashing
     $stmt->bindParam(':sex', $user->sex);
     
     if ($stmt->execute())
@@ -28,21 +26,20 @@ function Signup($user, $db)
         return false;
 }
 
+
 /*
 This method is for checking the credentials
 */
 
 function Login($un, $pass, $db)
 {
-    $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
-
     $query = "SELECT ID,FN,LN,PASSWORD FROM tbl_users WHERE USERNAME=:un";
     $stmt = $db->prepare($query);
     $stmt->execute(['un' => $un]);
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($stmt->rowCount() > 0) {
-        if (password_verify($pass, $row['PASSWORD'])) {
+        if ($pass == $row['PASSWORD']) { // No hashing
             $name = $row["FN"] . " " . $row["LN"];
             return $name;
         } else {
