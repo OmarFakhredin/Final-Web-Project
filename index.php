@@ -10,14 +10,14 @@
     <title>Lugx Gaming Shop HTML5 Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="FE/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="FE/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="FE/assets/css/templatemo-lugx-gaming.css">
+    <link rel="stylesheet" href="FE/assets/css/owl.css">
+    <link rel="stylesheet" href="FE/assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 <!--
 
@@ -51,7 +51,7 @@ https://templatemo.com/tm-589-lugx-gaming
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png" alt="" style="width: 158px;">
+                        <img src="FE/assets/images/logo.png" alt="" style="width: 158px;">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
@@ -91,7 +91,7 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
         <div class="col-lg-4 offset-lg-2">
           <div class="right-image">
-            <img src="assets/images/banner-image.jpg" alt="">
+            <img src="FE/assets/images/banner-image.jpg" alt="">
             <span class="price">$22</span>
             <span class="offer">-40%</span>
           </div>
@@ -107,7 +107,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <a href="#">
             <div class="item">
               <div class="image">
-                <img src="assets/images/featured-01.png" alt="" style="max-width: 44px;">
+                <img src="FE/FE/assets/images/featured-01.png" alt="" style="max-width: 44px;">
               </div>
               <h4>Free Storage</h4>
             </div>
@@ -117,7 +117,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <a href="#">
             <div class="item">
               <div class="image">
-                <img src="assets/images/featured-02.png" alt="" style="max-width: 44px;">
+                <img src="FEFE/assets/images/featured-02.png" alt="" style="max-width: 44px;">
               </div>
               <h4>User More</h4>
             </div>
@@ -127,7 +127,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <a href="#">
             <div class="item">
               <div class="image">
-                <img src="assets/images/featured-03.png" alt="" style="max-width: 44px;">
+                <img src="FE/FE/assets/images/featured-03.png" alt="" style="max-width: 44px;">
               </div>
               <h4>Reply Ready</h4>
             </div>
@@ -137,7 +137,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <a href="#">
             <div class="item">
               <div class="image">
-                <img src="assets/images/featured-04.png" alt="" style="max-width: 44px;">
+                <img src="FE/assets/images/featured-04.png" alt="" style="max-width: 44px;">
               </div>
               <h4>Easy Layout</h4>
             </div>
@@ -164,7 +164,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-3 col-md-6">
           <div class="item">
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/trending-01.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/trending-01.jpg" alt=""></a>
               <span class="price"><em>$28</em>$20</span>
             </div>
             <div class="down-content">
@@ -177,7 +177,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-3 col-md-6">
           <div class="item">
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/trending-02.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/trending-02.jpg" alt=""></a>
               <span class="price">$44</span>
             </div>
             <div class="down-content">
@@ -190,7 +190,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-3 col-md-6">
           <div class="item">
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/trending-03.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/trending-03.jpg" alt=""></a>
               <span class="price"><em>$64</em>$44</span>
             </div>
             <div class="down-content">
@@ -203,7 +203,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-3 col-md-6">
           <div class="item">
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/trending-04.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/trending-04.jpg" alt=""></a>
               <span class="price">$32</span>
             </div>
             <div class="down-content">
@@ -234,7 +234,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-2 col-md-6 col-sm-6">
           <div class="item">
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/top-game-01.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/top-game-01.jpg" alt=""></a>
             </div>
             <div class="down-content">
                 <span class="category">Adventure</span>
@@ -246,7 +246,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-2 col-md-6 col-sm-6">
           <div class="item">
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/top-game-02.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/top-game-02.jpg" alt=""></a>
             </div>
             <div class="down-content">
                 <span class="category">Adventure</span>
@@ -258,7 +258,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-2 col-md-6 col-sm-6">
           <div class="item">
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/top-game-03.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/top-game-03.jpg" alt=""></a>
             </div>
             <div class="down-content">
                 <span class="category">Adventure</span>
@@ -270,7 +270,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-2 col-md-6 col-sm-6">
           <div class="item">
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/top-game-04.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/top-game-04.jpg" alt=""></a>
             </div>
             <div class="down-content">
                 <span class="category">Adventure</span>
@@ -282,7 +282,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-2 col-md-6 col-sm-6">
           <div class="item">
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/top-game-05.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/top-game-05.jpg" alt=""></a>
             </div>
             <div class="down-content">
                 <span class="category">Adventure</span>
@@ -294,7 +294,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-2 col-md-6 col-sm-6">
           <div class="item">
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/top-game-06.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/top-game-06.jpg" alt=""></a>
             </div>
             <div class="down-content">
                 <span class="category">Adventure</span>
@@ -320,7 +320,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="item">
             <h4>Action</h4>
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-01.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/categories-01.jpg" alt=""></a>
             </div>
           </div>
         </div>
@@ -328,7 +328,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="item">
             <h4>Action</h4>
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-05.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/categories-05.jpg" alt=""></a>
             </div>
           </div>
         </div>
@@ -336,7 +336,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="item">
             <h4>Action</h4>
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-03.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/categories-03.jpg" alt=""></a>
             </div>
           </div>
         </div>
@@ -344,7 +344,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="item">
             <h4>Action</h4>
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-04.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/categories-04.jpg" alt=""></a>
             </div>
           </div>
         </div>
@@ -352,7 +352,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="item">
             <h4>Action</h4>
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-05.jpg" alt=""></a>
+              <a href="product-details.html"><img src="FE/assets/images/categories-05.jpg" alt=""></a>
             </div>
           </div>
         </div>
@@ -411,12 +411,12 @@ https://templatemo.com/tm-589-lugx-gaming
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="FE/vendor/jquery/jquery.min.js"></script>
+  <script src="FE/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="FE/assets/js/isotope.min.js"></script>
+  <script src="FE/assets/js/owl-carousel.js"></script>
+  <script src="FE/assets/js/counter.js"></script>
+  <script src="FE/assets/js/custom.js"></script>
 
   </body>
 </html>
