@@ -88,3 +88,21 @@ function AddMovieForm()
     <?php
 }
 ?>
+<?php
+function generateMovieCard($movie)
+{
+    $html = '
+    <div class="col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6">
+        <div class="item">
+            <div class="thumb">
+                <img src="../assets/images/' . $movie->img . '" alt="' . $movie->movie . '">
+            </div>
+            <div class="down-content">
+                <h4>' . $movie->movie . '</h4>  
+                <span class="category">' . $movie->description . '</span>
+            </div>
+        </div>
+    </div>';
+    return $html;
+}
+?>

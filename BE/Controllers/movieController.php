@@ -56,6 +56,9 @@ if (isset($_POST['action']) && $_POST['action'] == "ADD_MOVIE") {
 } else {
     header("location:../../index.php?errorCode=2&errorDesc=Server Error!");
 }
+
+$movies = GetMovies();
+require_once("../../FE/pages/movies.php");
 function isMissingArgs()
 {
     return !isset($_POST["id"]) || !isset($_POST["activate"]);

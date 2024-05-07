@@ -48,7 +48,7 @@ function GetMovies(){
             $Movie->movie=$row['MOVIE'];
             $Movie->description=$row['DESCRIPTION'];
             $Movie->isActive=$row['IS_ACTIVE'];
-            $Movie->img = $row['Image'];
+            $Movie->img = $row['IMAGE'];
             $Movies[]=$Movie;
         }
         return $Movies;

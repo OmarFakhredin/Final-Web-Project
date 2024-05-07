@@ -5,4 +5,5 @@ class Movie{
     public $description;
     public $isActive;
     public $img;
+    public $link;
 }
