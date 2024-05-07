@@ -52,21 +52,10 @@
     <div class="container mt-5">
         <div class="row align-items-center">
             <div class="col-md-6 mx-auto">
-                <h2 class="mb-4 text-center">Sign In</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="Enter username">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-                </form>
-            </div>
-            <div class="col-md-6">
-                <img src="assets/images/banner-image.jpg" alt="" class="img-fluid">
+                <?php
+                    include_once("Views/userView.php");
+                    LoginForm();
+                ?>
             </div>
         </div>
     </div>
