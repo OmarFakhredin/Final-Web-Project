@@ -10,11 +10,11 @@ if (!isMissingArgs()) {
     $isActive = $_POST["activate"];
     if (activateMovie($id, $isActive, $db)) {
         header("location:../../FE/pages/activateMovie.php");
+        exit(); 
     } else {
         header("location:../../FE/pages/activateMovie.php?errorCode=1&errorDesc=Database error!");
+        exit();
     }
-} else {
-    header("location:../../index.php?errorCode=2&errorDesc=Server Error!");
 }
 if (isset($_POST['action']) && $_POST['action'] == "ADD_MOVIE") {
     if (!empty($_POST['tfname']) && !empty($_POST['tfdescription']) && isset($_FILES['tfimage'])) {
