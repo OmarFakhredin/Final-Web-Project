@@ -39,7 +39,7 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            <img src="assets/images/logo.png" alt="" style="width: 158px;">
+                            <img src="../assets/images/logo.png" alt="" style="width: 158px;">
                         </a>
                         <!-- ***** Logo End ***** -->
                     </nav>
@@ -53,7 +53,7 @@
         <div class="row align-items-center">
             <div class="col-md-6 mx-auto">
                 <?php
-                    include_once("Views/userView.php");
+                    include_once("../Views/userView.php");
                     LoginForm();
                 ?>
             </div>

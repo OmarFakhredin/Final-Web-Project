@@ -5,7 +5,7 @@ function LoginForm(){
         <div class="row align-items-center">
             <div class="col-md-6 mx-auto">
                 <h2 class="mb-4 text-center">Sign In</h2>
-                <form name="loginFrm" id="login-frm" action="../Be/controllers/userController.php" method="POST">
+                <form name="loginFrm" id="login-frm" action="../../BE/Controllers/userController.php" method="POST">
                     <input type="hidden" name="action" value="LOGIN">
                     <div class="form-group">
                         <label for="tfun">Username</label>

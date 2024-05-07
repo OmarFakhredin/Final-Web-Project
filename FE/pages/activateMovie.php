@@ -56,10 +56,9 @@ https://templatemo.com/tm-589-lugx-gaming
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="index.php">Add Item</a></li>
-              <li><a href="activate-item.php">Activate Item</a></li>
-              <li><a href="deactivate-item.php">Deactivate Item</a></li>
-              <li><a href="signup.php">Sign Up</a></li>
+              <li><a href="viewMovie.php">Activate/Deactivate Movies</a></li>
+              <li><a href="index.php">Add Movie</a></li>
+              <li><a href="signup.php">Add Admin</a></li>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
@@ -77,8 +76,7 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="row">
         <div class="col-lg-6 align-self-center">
           <div class="caption header-text">
-            <h6>Welcome to lugx</h6>
-            <h2>BEST Movie SITE EVER!</h2>
+            <h6>Welcome to lugx Admin Side</h6>
             <table class="table">
               <thead>
                 <tr>
@@ -86,14 +84,14 @@ https://templatemo.com/tm-589-lugx-gaming
                   <th scope="col">Movie</th>
                   <th scope="col">Description</th>
                   <th scope="col">Active</th>
-                  <th scope="col">Image</th>
+                  <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
                 <?php
                 require_once("../BE/Common/dbconfig.php");
-                require_once("../BE/listActiveMovie.php");
-                $movies = GetMovies();
+                require_once("../BE/Models/movieModel.php");
+                $movies = GetMoviesAdmin();
                 if ($movies != 0) {
                   foreach ($movies as $movie) {
                 ?>
@@ -101,8 +99,14 @@ https://templatemo.com/tm-589-lugx-gaming
                       <td><?php echo $movie->id; ?></td>
                       <td><?php echo $movie->movie; ?></td>
                       <td><?php echo $movie->description; ?></td>
-                      <td><?php echo $movie->isActive; ?></td>
-                      <td><?php echo $movie->img; ?></td>
+                      <td><?php echo $movie->isActive ? "Active" : "Deactivated"; ?></td>
+                      <td>
+                        <form name="activateForm" method="post" action="../BE/Controllers/movieController.php">
+                            <input type="hidden" name="id" value="<?php echo $movie->id; ?>">
+                            <input type="hidden" name="activate" value="<?php echo $movie->isActive ? 0 : 1; ?>">
+                            <input type="submit" class="btn btn-primary" value="<?php echo $movie->isActive ? "Deactivate" : "Activate"; ?>">
+                        </form>
+                      </td>
                     </tr>
                 <?php
                   }
