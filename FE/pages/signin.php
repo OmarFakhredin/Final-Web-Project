@@ -27,6 +27,10 @@
         .img-fluid {
             border-radius: 15px; /* Rounded corners */
             box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75); /* Adding shadow */
+            max-width: 100%;
+        }
+        .row.align-items-center > [class^=col] {
+            margin-bottom: 20px; /* Adjust this value to change the space between the form and the image */
         }
     </style>
 </head>

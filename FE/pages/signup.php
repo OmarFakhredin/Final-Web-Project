@@ -27,6 +27,7 @@
         .img-fluid {
             border-radius: 15px; /* Rounded corners */
             box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75); /* Adding shadow */
+            max-width: 100%;
         }
     </style>
 </head>
@@ -39,7 +40,7 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            <img src="assets/images/logo.png" alt="" style="width: 158px;">
+                            <img src="../assets/images/logo.png" alt="" style="width: 158px;">
                         </a>
                         <!-- ***** Logo End ***** -->
                     </nav>
@@ -51,9 +52,9 @@
 
     <div class="container mt-5">
         <div class="row align-items-center">
-            <div class="col-md-6 mx-auto">
+            <div class="col-md-6">
                 <?php
-                    include_once("Views/userView.php");
+                    include_once("../Views/userView.php");
                     SignUpForm();
                 ?>
             </div>

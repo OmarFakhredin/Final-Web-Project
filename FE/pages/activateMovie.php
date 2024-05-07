@@ -10,14 +10,14 @@
   <title>Lugx Gaming Shop HTML5 Template</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
   <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="../assets/css/fontawesome.css">
+  <link rel="stylesheet" href="../assets/css/templatemo-lugx-gaming.css">
+  <link rel="stylesheet" href="../assets/css/owl.css">
+  <link rel="stylesheet" href="../assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <!--
 
@@ -51,12 +51,12 @@ https://templatemo.com/tm-589-lugx-gaming
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo">
-              <img src="assets/images/logo.png" alt="" style="width: 158px;">
+              <img src="../assets/images/logo.png" alt="" style="width: 158px;">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="viewMovie.php">Activate/Deactivate Movies</a></li>
+              <li><a href="activateMovie.php">Activate/Deactivate Movies</a></li>
               <li><a href="index.php">Add Movie</a></li>
               <li><a href="signup.php">Add Admin</a></li>
             </ul>
@@ -77,50 +77,18 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-6 align-self-center">
           <div class="caption header-text">
             <h6>Welcome to lugx Admin Side</h6>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Movie</th>
-                  <th scope="col">Description</th>
-                  <th scope="col">Active</th>
-                  <th scope="col">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php
-                require_once("../BE/Common/dbconfig.php");
-                require_once("../BE/Models/movieModel.php");
-                $movies = GetMoviesAdmin();
-                if ($movies != 0) {
-                  foreach ($movies as $movie) {
-                ?>
-                    <tr>
-                      <td><?php echo $movie->id; ?></td>
-                      <td><?php echo $movie->movie; ?></td>
-                      <td><?php echo $movie->description; ?></td>
-                      <td><?php echo $movie->isActive ? "Active" : "Deactivated"; ?></td>
-                      <td>
-                        <form name="activateForm" method="post" action="../BE/Controllers/movieController.php">
-                            <input type="hidden" name="id" value="<?php echo $movie->id; ?>">
-                            <input type="hidden" name="activate" value="<?php echo $movie->isActive ? 0 : 1; ?>">
-                            <input type="submit" class="btn btn-primary" value="<?php echo $movie->isActive ? "Deactivate" : "Activate"; ?>">
-                        </form>
-                      </td>
-                    </tr>
-                <?php
-                  }
-                } else {
-                  echo "<tr><td colspan='5'>No movies found</td></tr>";
-                }
-                ?>
-              </tbody>
-            </table>
+            <?php
+            require_once("../../BE/Common/dbconfig.php");
+            require_once("../../BE/Models/movieModel.php");
+            require_once("../Views/movieView.php");
+            $movies = GetMoviesAdmin();
+            MovieTable($movies);
+            ?>
           </div>
         </div>
         <div class="col-lg-4 offset-lg-2">
           <div class="right-image">
-            <img src="assets/images/banner-image.jpg" alt="">
+            <img src="../assets/images/banner-image.jpg" alt="">
             <span class="price">$22</span>
             <span class="offer">-40%</span>
           </div>
@@ -131,12 +99,12 @@ https://templatemo.com/tm-589-lugx-gaming
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/js/isotope.min.js"></script>
+  <script src="../assets/js/owl-carousel.js"></script>
+  <script src="../assets/js/counter.js"></script>
+  <script src="../assets/js/custom.js"></script>
 
 </body>
 </html>

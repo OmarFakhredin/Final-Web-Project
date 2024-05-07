@@ -9,9 +9,9 @@ if (!isMissingArgs()) {
     $id = $_POST["id"];
     $isActive = $_POST["activate"];
     if (activateMovie($id, $isActive, $db)) {
-        header("location:../../FE/viewMovie.php");
+        header("location:../../FE/pages/activateMovie.php");
     } else {
-        header("location:../../FE/viewMovie.php?errorCode=1&errorDesc=Database error!");
+        header("location:../../FE/pages/activateMovie.php?errorCode=1&errorDesc=Database error!");
     }
 } else {
     header("location:../../index.php?errorCode=2&errorDesc=Server Error!");

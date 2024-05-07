@@ -27,7 +27,7 @@ function LoginForm(){
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="assets/images/banner-image.jpg" alt="" class="img-fluid">
+                <img src="../assets/images/banner-image.jpg" alt="" class="img-fluid">
             </div>
         </div>
     </div>
@@ -60,7 +60,7 @@ function SignUpForm(){
         <div class="row align-items-center">
             <div class="col-md-6 mx-auto">
                 <h2 class="mb-4 text-center">Sign Up</h2>
-                <form name="signup" action="../Be/controllers/userController.php" method="POST">
+                <form name="signup" action="../../BE/Controllers/userController.php" method="POST">
                     <input type="hidden" name="action" value="SIGNUP">
                     <div class="form-group">
                         <label for="tfun">Username</label>
@@ -105,7 +105,7 @@ function SignUpForm(){
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="assets/images/banner-image.jpg" alt="" class="img-fluid">
+                <img src="../assets/images/banner-image.jpg" alt="" class="img-fluid">
             </div>
         </div>
     </div>
