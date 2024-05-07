@@ -40,3 +40,51 @@ function MovieTable($movies){
 <?php
 }
 ?>
+<?php
+function AddMovieForm()
+{
+    ?>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        Add Movie
+                    </div>
+                    <div class="card-body">
+                        <form name="addMovie" action="../../BE/Controllers/movieController.php" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="action" value="ADD_MOVIE">
+                            <div class="form-group">
+                                <label for="tfname">Movie Name</label>
+                                <input id="tfname" type="text" class="form-control" name="tfname" placeholder="Enter movie name">
+                            </div>
+                            <div class="form-group">
+                                <label for="tfdescription">Description</label>
+                                <textarea id="tfdescription" class="form-control" name="tfdescription" placeholder="Enter description"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="tfimage">Image</label>
+                                <input id="tfimage" type="file" class="form-control-file" name="tfimage">
+                            </div>
+                            <div class="form-group">
+                                <label for="tfisActive">Active</label>
+                                <select class="form-control" id="tfisActive" name="tfisActive">
+                                    <option value="1">Active</option>
+                                    <option value="0">Deactivated</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary btn-block" value="Add Movie">
+                            </div>
+                            <div class="form-group">
+                                <input type="reset" class="btn btn-secondary btn-block" value="Cancel">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+}
+?>
