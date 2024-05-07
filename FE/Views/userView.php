@@ -5,7 +5,7 @@ function LoginForm(){
         <div class="row align-items-center">
             <div class="col-md-6 mx-auto">
                 <h2 class="mb-4 text-center">Sign In</h2>
-                <form name="loginFrm" id="login-frm" action="be/controllers/userController.php" method="POST">
+                <form name="loginFrm" id="login-frm" action="../Be/controllers/userController.php" method="POST">
                     <input type="hidden" name="action" value="LOGIN">
                     <div class="form-group">
                         <label for="tfun">Username</label>
@@ -31,6 +31,24 @@ function LoginForm(){
             </div>
         </div>
     </div>
+
+    <script>
+        function LoginFrm(){
+            let un=document.getElementById("tfun").value;
+            console.log(un);
+            let pass=document.getElementById("tfpass").value;
+            console.log(pass);
+            if ((un=="")||(pass=="")){
+                alert("Please fill in the username and password");
+            } else {
+                document.getElementById("login-frm").submit();
+            }
+        }
+        function ResetFrm(){
+            document.getElementById("tfun").value="";
+            document.getElementById("tfpass").value="";
+        }
+    </script>
         
     <?php
 }

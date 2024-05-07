@@ -22,7 +22,7 @@ if (isset($_POST["action"])){
                 $pass=$_POST["tfpass"];
                 if ($name=Login($un, $pass, $db)){
                     $_SESSION["name"]=$name;
-                    header("location:../../Fe/pages/listUsers.php");
+                    header("location:../../index.php");
                 }else{
                     header("location:../../index.php?errorCode=1&errorDesc=Wrong Username or Password!");
                 }    
