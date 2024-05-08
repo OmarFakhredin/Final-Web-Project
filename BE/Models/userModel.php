@@ -10,6 +10,7 @@ This method inserts the admin info into the table
 */
 function Signup($user, $db)
 {
+    $hashed_password = password_hash($user->password, PASSWORD_DEFAULT);
     $query = "INSERT INTO `tbl_users` (`USERNAME`,`EMAIL`,`FN`,`LN`,`PASSWORD`,`SEX`) 
               VALUES (:username, :email, :firstname, :lastname, :password, :sex)";
     $stmt = $db->prepare($query);
@@ -17,7 +18,7 @@ function Signup($user, $db)
     $stmt->bindParam(':email', $user->email);
     $stmt->bindParam(':firstname', $user->firstname);
     $stmt->bindParam(':lastname', $user->lastname);
-    $stmt->bindParam(':password', $user->password); // No hashing
+    $stmt->bindParam(':password', $hashed_password);
     $stmt->bindParam(':sex', $user->sex);
     
     if ($stmt->execute())
@@ -39,7 +40,7 @@ function Login($un, $pass, $db)
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($stmt->rowCount() > 0) {
-        if ($pass == $row['PASSWORD']) { // No hashing
+        if (password_verify($pass, $row['PASSWORD'])) {
             $name = $row["FN"] . " " . $row["LN"];
             return $name;
         } else {
