@@ -58,7 +58,7 @@ https://templatemo.com/tm-589-lugx-gaming
             <ul class="nav">
               <li><a href="index.php">About</a></li>
               <li><a href="FE/pages/movies.php">Movies</a></li>
-              <li><a href="contact-us.html">Contact Us</a></li>
+              <li><a href="FE/pages/contact.php">Contact Us</a></li>
               <li><a href="FE/pages/signin.php">Login</a></li>
             </ul>
             <a class='menu-trigger'>
