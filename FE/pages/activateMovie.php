@@ -54,16 +54,7 @@ https://templatemo.com/tm-589-lugx-gaming
               <img src="../assets/images/logo.png" alt="" style="width: 158px;">
             </a>
             <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li><a href="activateMovie.php">Activate/Deactivate Movies</a></li>
-              <li><a href="addMovie.php">Add Movie</a></li>
-              <li><a href="signup.php">Add Admin</a></li>
-            </ul>
-            <a class='menu-trigger'>
-              <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
+            <?php require_once("common/adminMenu.php"); ?>
           </nav>
         </div>
       </div>
